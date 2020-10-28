@@ -67,7 +67,7 @@ func main() {
 			p := Proceso{Id: i, Status: true, Canal: make(chan uint)}
 			go p.start()
 			go p.cleanChanel()
-			lista.PushBack(p)
+			lista.PushBack(&p)
 			i++
 			break
 		case 2:
